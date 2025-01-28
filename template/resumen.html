@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,44 +9,44 @@
 
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="mt-5">
         <div class="alert alert-dark">
             <h1 class="display-1 text-center"><strong>ANALISIS DE ACEITE</strong></h1>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="table-container">
-                    <table class="table-bordered">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
+      </div>
+      <div class="container justify-content-center">
+      <div class="row">
+        <div class="col-12">
+            <div class="table">
+                <table class="table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">CAMION</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">MT1 hrs</th>
+                        <th scope="col">MT2 hrs</th>
+                        <th scope="col">condicion</th>
+                        <th scope="col">Observacion</th>
+                        <th scope="col">recomendacion</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {for r in respuesta}
+                      <tr>
+                        <th scope="row"></th>
+                        <td>{{r.0}}<td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>
+      </div>
 </body>
 </html>

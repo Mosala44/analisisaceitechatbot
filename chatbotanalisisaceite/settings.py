@@ -76,11 +76,14 @@ WSGI_APPLICATION = 'chatbotanalisisaceite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
+from pymongo import MongoClient
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'chatbot_analisis',
+        'CLIENT': {
+            'host': 'localhost',  # Dirección del servidor MongoDB
+            'port': 27017,}
     }
 }
 

@@ -17,9 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from appuno import views
+from appuno.views import chatbot
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.chatbot),
-    path('resumen/', views.resumen)
+    path('', views.chatbot_view),
+    path('resumen/', views.resumen),
+    path("api/chatbot/", chatbot, name="chatbot_api"),
+    path('descargar_resumen/', views.generar_resumen, name='descargar_resumen'),  # URL para generar el resumen
+    path('reiniciar_chatbot/', views.reiniciar_chatbot, name='reiniciar_chatbot'),
+
+
+
 ]
